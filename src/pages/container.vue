@@ -33,9 +33,9 @@
                             </span>
                         </p>
                     </li>
-                    <li>
-                        <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showValues = !showValues" />
-                        <p class="text-content">
+                    <li style="width: 100%;">
+                        <img :class="!showValues ? 'img-icon' : 'img-with-padding'" src="./../assets/down-arrow.svg" v-on:click="showValues = !showValues" />
+                        <p class="content-list">
                             NUESTROS VALORES
                             <ul class="list-securities" v-if="showValues">
                                 <li class="list-value">Trabajo en equipo</li>
@@ -182,6 +182,11 @@ export default {
     width: 20px;
     cursor: pointer;
 }
+.img-with-padding {
+    width: 20px;
+    cursor: pointer;
+    padding-bottom: 82px;
+}
 .information {
     height: 100vh;
     background-repeat: no-repeat;
@@ -205,14 +210,20 @@ export default {
 }
 .text-content {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     font-size: 25px;
+    display: flex;
+}
+.content-list {
+    padding: 0 0 0 12px;
+    font-size: 25px;
+    width: 100%;
     display: flex;
 }
 .text-info {
     padding: 0 0 0 20px;
     font-size: 20px;
-    width: 40%;
+    width: 65%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .list-securities {
@@ -220,6 +231,7 @@ export default {
 }
 .list-securities .list-value {
     margin: 0;
+    padding: 0;
     font-size: 20px;
     list-style-type: circle;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -234,7 +246,7 @@ ul .list-value {
 }
 .list-first li {
     display: flex;
-    margin: 40px;
+    padding: 30px;
 }
 .section-we-make {
     height: 100vh;
