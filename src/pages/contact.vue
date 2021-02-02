@@ -63,15 +63,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-            value: false,
-            showMision: false,
-            showVision: false,
-            showValues: false,
-        }
-    },
-
     methods: {
         functionShowMision() {
             console.log("Hola")

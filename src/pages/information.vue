@@ -5,8 +5,8 @@
             <p class="subtitle-second">"Para nosotros la tecnología es una solución, no un obstáculo"</p>
             <ul class="list-first">
                 <li>
-                    <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showMision = !showMision" />
                     <p class="text-content">
+                        <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showMision = !showMision" />
                         MISIÓN 
                         <span class="text-info" v-if="showMision">
                             Ser una empresa socialmente responsable que contribuye con soluciones innovadoras
@@ -14,42 +14,57 @@
                     </p>    
                 </li>
                 <li>
-                    <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showVision = !showVision" />
                     <p class="text-content">
+                        <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showVision = !showVision" />
                         VISIÓN 
                         <span class="text-info" v-if="showVision">
                             Ayudamos a comprender, utilizar y desarrollar herramientas tecnologicas que esten al avance de todos
                         </span>
                     </p>
                 </li>
-                <li style="width: 100%;">
-                    <img :class="!showValues ? 'img-icon' : 'img-with-padding'" src="./../assets/down-arrow.svg" v-on:click="showValues = !showValues" />
-                    <p class="content-list">
+                <li>
+                    <p class="text-content">
+                        <img :class="!showValues ? 'img-icon' : 'img-with-padding'" src="./../assets/down-arrow.svg" v-on:click="showValues = !showValues" />
                         NUESTROS VALORES
-                        <ul class="list-securities" v-if="showValues">
-                            <li class="list-value">Trabajo en equipo</li>
-                            <li class="list-value">Trabajo respetuoso</li>
-                            <li class="list-value">Innovación y competitividad</li>
-                            <li class="list-value">Integridad laboral</li>
-                            <li class="list-value">Constncia y disciplina</li>
-                            <li class="list-value">Transparencia y cultura abierta</li>
-                        </ul>
                     </p>
+                    <ul class="list-securities" v-if="showValues">
+                        <li class="list-value">Trabajo en equipo</li>
+                        <li class="list-value">Trabajo respetuoso</li>
+                        <li class="list-value">Innovación y competitividad</li>
+                        <li class="list-value">Integridad laboral</li>
+                        <li class="list-value">Constncia y disciplina</li>
+                        <li class="list-value">Transparencia y cultura abierta</li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            value: false,
+            showMision: false,
+            showVision: false,
+            showValues: false,
+        }
+    },
+}
+</script>
+
 <style scoped>
 .img-icon {
     width: 20px;
     cursor: pointer;
+    padding-right: 10px ;
 }
 .img-with-padding {
     width: 20px;
     cursor: pointer;
-    padding-bottom: 82px;
+    padding-bottom: 88px;
+    padding-right: 10px;
 }
 .information {
     height: 100vh;
@@ -80,15 +95,25 @@
     padding: 30px;
 }
 .text-content {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     font-size: 25px;
     display: flex;
 }
-.content-list {
-    padding: 0 0 0 12px;
-    font-size: 25px;
+.list-securities {
     width: 100%;
-    display: flex;
+}
+.list-securities .list-value {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    list-style-type: circle;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-info {
+    padding: 0 0 0 20px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
     <div class="hero">
-            <!--div class="container-img">
-                <img class="simbol-class" src="./../assets/instagram.svg" />
-                <img class="simbol-class" src="./../assets/facebook.svg" />
-                <img class="simbol-class" src="./../assets/youtube.svg" />
-                <img class="simbol-class" src="./../assets/whatsapp.svg" />
-            </div-->
+            <div class="container-img">
+                <img class="social-media" src="./../assets/instagram.svg" />
+                <img class="social-media" src="./../assets/facebook.svg" />
+                <img class="social-media" src="./../assets/youtube.svg" />
+                <img class="social-media" src="./../assets/whatsapp.svg" />
+            </div>
             <div class="container">
                 <div class="content">
                     <h1 class="title">A M M F E C</h1>
@@ -24,18 +24,33 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.container {
+    margin-top: 0;
+}
 .hero .container-img {
     align-content: center;
 }
 .hero .container {
     display: grid;
-    align-content: center;
+    padding-top: 8%;
     height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.social-media {
+    margin: 0;
+    cursor: pointer;
+    padding-right: 15px;
+    width: 30px;
+}
 .simbol-class {
+    margin-top: 50px;
     width: 10%;
-    padding-top: 80px;
+}
+.container-img {
+  margin: 0;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
 }
 .hero .content {
     text-align: center;

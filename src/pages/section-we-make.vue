@@ -21,22 +21,6 @@
     margin: 25px;
     padding-top: 50px ;
 }
-.text-info {
-    padding: 0 0 0 20px;
-    font-size: 20px;
-    width: 65%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.list-securities {
-    width: 100%;
-}
-.list-securities .list-value {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    list-style-type: circle;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 ul .list-value {
     margin: 15px;
     list-style-type: circle;
