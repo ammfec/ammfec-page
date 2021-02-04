@@ -6,7 +6,7 @@
             <ul class="list-first">
                 <li>
                     <p class="text-content">
-                        <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showMision = !showMision" />
+                        <img :class="!showMision ? 'img-icon' : 'img-without-list'" src="./../assets/down-arrow.svg" v-on:click="showMision = !showMision" />
                         MISIÓN 
                         <span class="text-info" v-if="showMision">
                             Ser una empresa socialmente responsable que contribuye con soluciones innovadoras
@@ -15,7 +15,7 @@
                 </li>
                 <li>
                     <p class="text-content">
-                        <img class="img-icon" src="./../assets/down-arrow.svg" v-on:click="showVision = !showVision" />
+                        <img :class="!showVision ? 'img-icon' : 'img-vision-list'" src="./../assets/down-arrow.svg" v-on:click="showVision = !showVision" />
                         VISIÓN 
                         <span class="text-info" v-if="showVision">
                             Ayudamos a comprender, utilizar y desarrollar herramientas tecnologicas que esten al avance de todos
@@ -63,8 +63,20 @@ export default {
 .img-with-padding {
     width: 20px;
     cursor: pointer;
-    padding-bottom: 88px;
-    padding-right: 10px;
+    padding-bottom: 105px;
+    padding-right: 5px;
+}
+.img-without-list {
+    width: 20px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    padding-right: 5px;
+}
+.img-vision-list {
+    width: 20px;
+    cursor: pointer;
+    padding-bottom: 40px;
+    padding-right: 5px;
 }
 .information {
     height: 100vh;
@@ -96,7 +108,7 @@ export default {
 }
 .text-content {
     width: 50%;
-    padding: 10px;
+    padding: 0px;
     font-size: 25px;
     display: flex;
 }
@@ -115,5 +127,69 @@ export default {
     font-size: 20px;
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media (max-width: 750px) {
+    .information .container {
+        display: grid;
+        height: 100vh;
+    }
+    .title-second {
+        font-size: 25px;
+        margin: 0;
+        padding-top: 0;
+    }
+    .subtitle-second {
+        margin: 30px 0 20px 0;
+        font-size: 18px;
+    }
+    .text-content {
+        width: 100%;
+        padding: 0px;
+        font-size: 15px;
+        display: flex;
+    }
+    .text-info {
+        padding: 0 0 0 20px;
+        font-size: 10px;
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .img-icon {
+        width: 10px;
+        cursor: pointer;
+        padding-right: 10px ;
+    }
+    .img-with-padding {
+        width: 5%;
+        cursor: pointer;
+        padding-bottom: 80px;
+        padding-right: 10px;
+    }
+    .img-without-list {
+        width: 10px;
+        cursor: pointer;
+        padding-bottom: 10px;
+        padding-right: 5px;
+    }
+    .img-vision-list {
+        width: 10px;
+        cursor: pointer;
+        padding-bottom: 20px;
+        padding-right: 5px;
+    }
+    .list-first li {
+        padding: 10px;
+    }
+    .list-securities {
+        width: 50%;
+        margin: 0;
+    }
+    .list-securities .list-value {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        list-style-type: circle;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 }
 </style>

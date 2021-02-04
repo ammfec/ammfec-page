@@ -22,7 +22,7 @@
     background-image: url("./../assets/background-init.png");
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto auto;
 }
 .container {
     margin-top: 0;
@@ -32,14 +32,14 @@
 }
 .hero .container {
     display: grid;
-    padding-top: 8%;
+    align-content: center;
     height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .social-media {
     margin: 0;
     cursor: pointer;
-    padding-right: 15px;
+    padding-right: 35px;
     width: 30px;
 }
 .simbol-class {
@@ -64,5 +64,25 @@
 .subtitle {
     margin: 30px 0 30px 0;
     font-size: 2rem;
+}
+@media (max-width: 1000px) {
+    .title {
+        font-size: 4rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+    .simbol-class {
+        margin-top: 50px;
+        width: 30%;
+    }
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+    .subtitle {
+        font-size: 2rem;
+    }
 }
 </style>

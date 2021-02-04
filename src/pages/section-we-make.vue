@@ -1,16 +1,14 @@
 <template>
     <div class="section-we-make">
         <div class="container">
-            <div class="content">
-                <h1 class="title-second white-color">¿QUÉ HACEMOS?</h1>
-                <p class="subtitle-we-make white-color">Desarrollamos e implementamos soluciones innovadoras para satisfacer las necesidades tecnologicas a la medida del cliente con costos accesibles</p>
-                <ul class="white-color">
-                    <li class="list-value">Consultoria, assesoría y capacitación en IT</li>
-                    <li class="list-value">Desarrollo de plataformas web</li>
-                    <li class="list-value">Aplicaciones móviles</li>
-                    <li class="list-value">Mantenimiento a proyectos ya existentes</li>
-                </ul>
-            </div>
+            <h1 class="title-second white-color">¿QUÉ HACEMOS?</h1>
+            <p class="subtitle-we-make white-color">Desarrollamos e implementamos soluciones innovadoras para satisfacer las necesidades tecnologicas a la medida del cliente con costos accesibles</p>
+            <ul class="white-color">
+                <li class="list-value">Consultoria, assesoría y capacitación en IT</li>
+                <li class="list-value">Desarrollo de plataformas web</li>
+                <li class="list-value">Aplicaciones móviles</li>
+                <li class="list-value">Mantenimiento a proyectos ya existentes</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -52,5 +50,34 @@ ul .list-value {
 }
 .white-color {
     color: #FFFFFF
+}
+@media (max-width: 750px) {
+    .section-we-make .container {
+        margin-left: 20px;
+        display: grid;
+        width: 80%;
+        height: 100vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .section-we-make {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./../assets/background-init.png");
+    }
+    .subtitle-we-make {
+        font-size: 18px;
+        padding-bottom: 0;
+    }
+    .title-second {
+        font-size: 25px;
+        margin: 0;
+        padding-top: 10px;
+    }
+    ul .list-value {
+        padding: 2px;
+        list-style-type: circle;
+        font-size: 16px;
+    }
 }
 </style>
