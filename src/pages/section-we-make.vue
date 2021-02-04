@@ -2,12 +2,12 @@
     <div class="section-we-make">
         <div class="container">
             <h1 class="title-second white-color">¿QUÉ HACEMOS?</h1>
-            <p class="subtitle-we-make white-color">Desarrollamos e implementamos soluciones innovadoras para satisfacer las necesidades tecnologicas a la medida del cliente con costos accesibles</p>
+            <p class="subtitle-we-make white-color">Desarrollamos e implementamos soluciones innovadoras para satisfacer las necesidades tecnológicas a la medida del cliente con costos accesibles.</p>
             <ul class="white-color">
-                <li class="list-value">Consultoria, assesoría y capacitación en IT</li>
-                <li class="list-value">Desarrollo de plataformas web</li>
-                <li class="list-value">Aplicaciones móviles</li>
-                <li class="list-value">Mantenimiento a proyectos ya existentes</li>
+                <li class="list-value">Consultoría, asesoría y capacitación en IT..</li>
+                <li class="list-value">Desarrollo de plataformas web.</li>
+                <li class="list-value">Aplicaciones móviles.</li>
+                <li class="list-value">Mantenimiento a proyectos ya existentes.</li>
             </ul>
         </div>
     </div>

@@ -9,7 +9,7 @@
                         <img :class="!showMision ? 'img-icon' : 'img-without-list'" src="./../assets/down-arrow.svg" v-on:click="showMision = !showMision" />
                         MISIÓN 
                         <span class="text-info" v-if="showMision">
-                            Ser una empresa socialmente responsable que contribuye con soluciones innovadoras
+                            Ser una empresa socialmente responsable que contribuye con soluciones innovadoras.
                         </span>
                     </p>    
                 </li>
@@ -18,7 +18,7 @@
                         <img :class="!showVision ? 'img-icon' : 'img-vision-list'" src="./../assets/down-arrow.svg" v-on:click="showVision = !showVision" />
                         VISIÓN 
                         <span class="text-info" v-if="showVision">
-                            Ayudamos a comprender, utilizar y desarrollar herramientas tecnologicas que esten al avance de todos
+                            Ayudamos a comprender, utilizar y desarrollar herramientas tecnológicas que estén al avance de todos.
                         </span>
                     </p>
                 </li>
@@ -28,12 +28,12 @@
                         NUESTROS VALORES
                     </p>
                     <ul class="list-securities" v-if="showValues">
-                        <li class="list-value">Trabajo en equipo</li>
-                        <li class="list-value">Trabajo respetuoso</li>
-                        <li class="list-value">Innovación y competitividad</li>
-                        <li class="list-value">Integridad laboral</li>
-                        <li class="list-value">Constncia y disciplina</li>
-                        <li class="list-value">Transparencia y cultura abierta</li>
+                        <li class="list-value">Trabajo en equipo.</li>
+                        <li class="list-value">Trabajo respetuoso.</li>
+                        <li class="list-value">Innovación y competitividad.</li>
+                        <li class="list-value">Integridad laboral.</li>
+                        <li class="list-value">Constancia y disciplina.</li>
+                        <li class="list-value">Transparencia y cultura abierta.</li>
                     </ul>
                 </li>
             </ul>

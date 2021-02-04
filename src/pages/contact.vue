@@ -15,10 +15,11 @@
                     class="input-info"
                     type="email"
                     placeholder="Email"
-                    maxlength="10" />
+                />
                 <input
                     class="input-info"
                     type="number"
+                    maxlength="10"
                     placeholder="Télefono" />
                 <p style="padding-bottom: 10px">¿Qué tipo de proyecto estás buscando?</p>
                 <div class="toogle-display">
@@ -31,7 +32,7 @@
                         />
                     </div>
 
-                    <p>Consultoria, asesoría y capacitación</p>
+                    <p>Consultoría, asesoría y capacitación</p>
                 </div>
                 <div class="toogle-display">
                     <div>
@@ -43,7 +44,7 @@
                         />
                     </div>
 
-                    <p>Desarrollo de plataformas web</p>
+                    <p>Desarrollo de plataformas web.</p>
             
                 </div>
                 <div class="toogle-display">
