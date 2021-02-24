@@ -2,25 +2,33 @@
     <div class="section-contact">
         <div class="container">
             <h1 class="title-contact">CONTACTANOS</h1>
-            <form>
+            <form @submit.prevent>
                 <input
                     class="input-info"
                     type="text"
-                    placeholder="Nombre" />
+                    placeholder="Nombre"
+                    v-model="body.name"
+                />
                 <input
                     class="input-info"
                     type="text"
-                    placeholder="Apellido" />
+                    placeholder="Apellido"
+                    v-model="body.lastName"
+                />
                 <input
                     class="input-info"
                     type="email"
                     placeholder="Email"
+                    v-model="body.email"
                 />
                 <input
                     class="input-info"
                     type="number"
                     maxlength="10"
-                    placeholder="Télefono" />
+                    placeholder="Télefono"
+                    v-model="body.phone"
+                />
+                <p style="padding-bottom: 10px" v-if="!error && result === 200">Los datos, se enviaron correctamente</p>
                 <p style="padding-bottom: 10px">¿Qué tipo de proyecto estás buscando?</p>
                 <div class="toogle-display">
                     <div>
@@ -73,7 +81,7 @@
                     <p>Mantenimiento a proyectos ya existentes</p>
                     
                 </div>
-                <input class="style-button" type="submit" />
+                <button class="style-button" @click="hdlOnClick">Enviar</button>
             </form>
         </div>
     </div>
@@ -83,16 +91,46 @@
 export default {
     data () {
         return {
+            body: {
+              name: '',
+              lastName: '',
+              email: '',
+              phone: '',
+              proyects: []
+            },
             advisory: false,
             developing: false,
             applications: false,
             maintenance: false,
+            result: false,
+            error: false
         }
     },
 
     methods: {
         functionShowMision() {
             console.log("Hola")
+        },
+        async hdlOnClick () {
+            if (this.advisory) { this.body.proyects.push('Consultoria') }
+            if (this.developing) { this.body.proyects.push('Desarrollo') }
+            if (this.applications) { this.body.proyects.push('Apps') }
+            if (this.maintenance) { this.body.proyects.push('Mantenimiento') }
+
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify(this.body)
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            await fetch("https://ws.ammfec.com/information", requestOptions)
+                .then(result => this.result = result.status)
+                .catch(error => this. error = error)
+
         }
     },    
 }
