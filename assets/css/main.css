@@ -1426,7 +1426,10 @@ h1.title {
   -ms-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
 }
+.blog-img img {
 
+  width: 90%;
+}
 .blog-text {
   padding: 0 10px 0 0;
 }
@@ -1948,6 +1951,9 @@ h3.lght {
 display: flex;
 align-items: center;
 gap: 3rem;
+}
+.blog-item .tipo{
+  width: 100%;
 }
 .img_mision {
   text-align: center;
