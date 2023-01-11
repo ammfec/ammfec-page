@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /* ==================================================
 
 01 - SETUP
@@ -327,15 +326,7 @@ form input[type="submit"]{
   transition: all 0.25s cubic-bezier(0, 1.05, 0.72, 1.07);
 }
 
-
-
-
-
 /*  */
-
-
-
-
 
 .over-all {
   width: 100%;
@@ -706,7 +697,7 @@ nav .container {
 }
 
 .menu {
-  opacity: 0;
+  opacity: 50;
   position: fixed;
   top: 0;
   z-index: 98;
@@ -1516,7 +1507,7 @@ h3.detail-title {
 }
 
 .bg-work-2 {
-  background: url("../img/port/5.jpg") center no-repeat;
+  background: url("../img/port/5.png") center no-repeat;
   z-index: 3;
   position: fixed;
   text-align: center;

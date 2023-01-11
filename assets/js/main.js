@@ -19,6 +19,7 @@
     //--------------------------------------------------
     // Animation Start
     //--------------------------------------------------
+
     function startAnim() {
         TweenMax.from('.logo', 1, {
             y: '100',
@@ -63,8 +64,6 @@
 
 
     }
-
-   
 
     let bandera=false;
     $('#app').click(function(){
@@ -192,6 +191,9 @@
     //--------------------------------------------------
     // Animation on navbar scrolling background
     //--------------------------------------------------
+    
+    
+    
     var wind = $(window);
 
     wind.on("scroll", function () {
