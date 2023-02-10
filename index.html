@@ -29,7 +29,7 @@
     <div class="logo-load spinning"></div>
     <div class="over-all"></div>
     <!-- End Preload -->
-
+    
     <!-- Start Header -->
         <header>
             <nav>
@@ -234,44 +234,52 @@
                             </div>
                         </a>
 
-                        <form action="">
-                            <input type="text" placeholder="Nombre Completo">
-                            <input type="email" placeholder="Email">
-                            <input type="tel" placeholder="Telefono">
+                        <form action="" id="target" method="post">
+          
+                            <input type="text" placeholder="Nombre Completo" id="fullName">
+                            <input type="email" placeholder="Email" id="email">
+                            <input type="tel" placeholder="Telefono" id="tel">
                             <div class="option">
-                               
-
+                
                                 <div>
                                     <div class="box">
-                                      <input id="one" type="checkbox">
+                                      <input id="one" type="checkbox" name="option" class="demo" value="Consultoría, asesoría y capacitación">
                                       <span class="check"></span>
                                       <label for="one">Consultoría, asesoría y capacitación</label>
                                     </div>
                                     <div class="box">
-                                      <input id="two" type="checkbox">
+                                      <input id="two" type="checkbox" name="option" class="demo" value="Desarrollo de plataformas web">
                                       <span class="check"></span>
-                                      <label for="two">Desarrollo de plataformas web.</label>
+                                      <label for="two">Desarrollo de plataformas web</label>
                                     </div>
 
                                      <div class="box">
-                                        <input id="tree" type="checkbox">
+                                        <input id="tree" type="checkbox" name="option" value="Aplicaciones móviles" class="demo">
                                         <span class="check"></span>
                                         <label for="tree">Aplicaciones móviles</label>
                                       </div>
 
-
                                       <div class="box">
-                                        <input id="four" type="checkbox">
+                                        <input id="four" type="checkbox" name="option" value="Mantenimiento a proyectos ya existentes" class="demo">
                                         <span class="check"></span>
                                         <label for="four">Mantenimiento a proyectos ya existentes</label>
                                       </div>
 
                                   </div>
                             </div>
-
+                            <p class="error"></p>
+                            <div class="msjEnviado ocultar">
+                                <p>Gracias Por Solicitar Nuestro Servicios, Nos podremos en Contacto con Usted</p>
+                            </div>
                             <input type="submit" value="Enviar">
-
+                           
+                           
                         </form>
+                        <div class="loadingEmail ocultar">
+                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        </div>
+
+
                     </div>
                 </div>
 
