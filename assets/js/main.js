@@ -644,7 +644,7 @@
      
      setTimeout(() => {
        $.ajax({
-        url:'https://develop.xipatlani.com.mx:9105/external-ammfec/contact-ammfec',
+        url:'https://api.xipatlani.com.mx:9001/external-ammfec/contact-ammfec',
         contentType:'application/json',
         type:'POST',
         data:JSON.stringify(dateForm),
